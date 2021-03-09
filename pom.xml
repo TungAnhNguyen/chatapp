@@ -41,7 +41,7 @@
 				<artifactId>exec-maven-plugin</artifactId>
 				<version>1.4.0</version>
 				<configuration>
-				  <mainClass>main.java.com.example.springboot.Application</mainClass>
+				  <mainClass>main.java.com.example.springboot.Main</mainClass>
 				</configuration>
 			  </plugin>
 			  
