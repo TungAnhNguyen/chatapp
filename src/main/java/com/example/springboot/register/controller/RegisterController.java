@@ -15,7 +15,8 @@ public class RegisterController {
 
 	@GetMapping(RegisterConstant.REGISTER_LINK)
 	@ResponseBody
-	public Register sayHello() {
-		return new Register("Tung Anh", "register", "BKAV");
+	public String register() {
+		System.out.println("anhnt register");
+		return "register.html";
 	}
 }
