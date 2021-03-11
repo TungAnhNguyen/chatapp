@@ -2,16 +2,16 @@
 <html xmlns:th="https://www.thymeleaf.org">
 
 <head>
-    <title>Chat App Register</title>
+    <title>Chat App Login </title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 
 <body>
     <h1>Form</h1>
-    <form action="#" th:action="@{/register}" th:object="${LoginInbound}" method="POST">
+    <form action="#" th:action="@{/login}" th:object="${LoginInbound}" method="POST">
         <p>Username: <input type="text" th:field="*{userName}" /></p>
         <p>Password: <input type="password" th:field="*{password}" /></p>
-		<p><input type="submit" value="Submit"/></p>
+        <p><input type="submit" value="Submit"/></p>
     </form>
 
 </body>

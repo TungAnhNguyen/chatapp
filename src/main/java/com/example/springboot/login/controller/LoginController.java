@@ -15,14 +15,15 @@ public class LoginController {
 
 	@RequestMapping(value = LoginConstant.LOGIN_LINK, method = RequestMethod.GET)
 	public String getLogin(Model model) {
-		model.addAttribute("loginInbound", new LoginInbound());
-		return "login";
+		System.out.println("anhnt className: " + LoginInbound.class.getSimpleName());
+		model.addAttribute(LoginInbound.class.getSimpleName(), new LoginInbound());
+		return LoginConstant.LOGIN_TEMPLATE_PATH;
 	}
 
 	@RequestMapping(value = LoginConstant.LOGIN_LINK, method = RequestMethod.POST)
 	public String greeting(@ModelAttribute LoginInbound loginInbound, Model model) {
 		System.out.println("anhnt login name: " + loginInbound.getUserName() + "; password: " + loginInbound.getPassword());
 		
-		return "result";
+		return LoginConstant.LOGIN_RESULT_TEMPLATE_PATH;
 	}
 }
